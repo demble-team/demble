@@ -1,0 +1,41 @@
+name: Idea or experiment
+description: Share a collaboration problem and a small experiment to test a solution.
+title: "[Idea] "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe a real collaboration problem in a human + coding-agent team.
+      placeholder: We had to repeat the same decision to three different agents...
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Why does it matter?
+      description: What time, context, or coordination cost did this create?
+    validations:
+      required: true
+  - type: textarea
+    id: experiment
+    attributes:
+      label: Smallest useful experiment
+      description: How could we validate this idea with a demo or a narrow prototype?
+    validations:
+      required: false
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Evidence of success
+      description: What observable result would convince us this helps?
+    validations:
+      required: false
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: I removed secrets, personal data, and private agent transcripts.
+          required: true
