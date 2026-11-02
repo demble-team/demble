@@ -1,83 +1,64 @@
 # Demble
 
-**Build ideas with friends and agents.**
+**和朋友、智能体一起，把想法做出来。**
 
-[简体中文](README.zh-CN.md) · [Roadmap](docs/ROADMAP.md) · [Contributing](CONTRIBUTING.md)
+[开发路线图](docs/ROADMAP.md) · [参与贡献](CONTRIBUTING.md)
 
-Demble is a source-available, self-hostable collaboration workspace for small startup teams and their AI coding agents.
+Demble 是面向小型创业／开发团队及其 AI 编码智能体的**源码可用、可自托管协作空间**。
 
-Bring your friends. Bring your favorite coding agents. Explore ideas, make decisions, build competing demos, and learn from real feedback—without repeatedly copying context between people and tools.
+当前文档和团队协作统一使用中文，英文文档待产品成熟后再补充。
 
-> **Project status: early design / pre-alpha.** This repository currently describes the product vision and planned milestones. There is no installable release or public demo yet. The capabilities below are **planned**, not shipped.
+几个朋友可以在这里讨论、开会、验证方向、分享不同版本的演示，并让各自熟悉的编码智能体获得同一份可信且可追溯的团队上下文。
 
-## The problem
+> **当前状态：早期设计与原型验证。** 仓库目前用于公开产品方向和实施计划，**尚无可安装版本和公开演示**。下列能力均属于规划目标，而非已交付功能。
 
-AI makes coding and prototyping faster, but working together can still be slow:
+## 我们想解决什么？
 
-- Important decisions disappear in long chats, meeting notes, and agent sessions.
-- Different people and coding agents work from different versions of the plan.
-- Trying several ideas is easy; comparing real demos and deciding what to build next is not.
-- Keeping everyone aligned requires too much manual summarization, copying, and status updating.
+AI 已经显著降低了写代码和做原型的成本，但几个人一起开发时，仍然需要在群聊、会议纪要、代码、个人笔记和不同智能体会话之间反复搬运上下文。
 
-Demble aims to make coordination lightweight while keeping humans in charge.
+团队很容易做出几个演示，却不容易说清楚：**我们在验证什么、决定了什么、为什么选择这个方向、下一步应该做什么。**
 
-## The idea
+Demble 希望降低这部分协作成本，而不是用 AI 接管团队。
 
-Each project lives in a **Room** where the team can:
+## 核心工作流
 
-1. **Talk** — use built-in discussions and meetings, with stable links to source material.
-2. **Capture** — let AI suggest decisions, experiments, tasks, and relationships from the conversation.
-3. **Review** — approve, edit, or dismiss those suggestions **in batches**. AI suggestions never silently become team decisions.
-4. **Experiment** — test multiple directions in parallel and share versioned demos.
-5. **Learn** — collect feedback, revisit decisions, and update a traceable plan.
-6. **Continue building** — let developers use their own coding agents with a permission-scoped, versioned context interface.
+1. **讨论**：内置群聊、话题引用和会议。
+2. **提取**：AI 从原始讨论中提议决策、实验、任务和关联关系。
+3. **确认**：由有权限的成员**批量审核**；未经确认的 AI 内容不会变成正式结论。
+4. **实验**：一个想法可以并行验证多个方向，分享可体验的演示。
+5. **反馈**：把真实反馈关联到对应的演示版本、实验和决策。
+6. **继续开发**：不同成员继续使用 Codex、Claude Code、OpenCode 等工具，通过开放接口获取授权范围内的共享上下文。
 
-The goal is **a shared understanding of what the team has actually agreed to**, not an AI that autonomously manages the team.
+## 我们坚持的原则
 
-## Principles
+- **人类主导**：方向、授权、正式决策和验收由人负责。
+- **AI 默认安静**：后台整理信息，成员主动邀请时才参与讨论。
+- **先审核再生效**：原始证据、AI 候选和已确认信息严格区分。
+- **不绑定智能体运行工具**：团队成员不必统一编辑器、模型或编码智能体。
+- **实验优先**：以可体验的结果和真实反馈推动方向选择。
+- **全程可溯源**：重要结论、计划变化和代码成果能够追查来源。
+- **自托管、低噪声**：基础协作不依赖外部即时通讯工具，也不把每句话都变成任务。
 
-- **Human-led.** People own priorities, permissions, decisions, and acceptance.
-- **AI when useful.** AI organizes information quietly and joins discussions when invited.
-- **Review before truth.** Raw evidence, AI proposals, and confirmed knowledge are separate states.
-- **Harness-agnostic.** Codex, Claude Code, OpenCode, and other tools should be able to work with the same context; Demble does not require a specific agent runtime.
-- **Experiment-first.** A demo and the evidence it produces matter more than a complicated task board.
-- **Traceable.** Decisions and changes link back to their sources and revisions.
-- **Self-hostable.** Core collaboration should not depend on a third-party messaging workspace.
-- **Low noise.** Not every message should become a task or notification.
+## 当前规划
 
-## What Demble is not
-
-- Not another coding-agent harness or an autonomous agent swarm scheduler.
-- Not a replacement for your IDE, Git host, or existing coding agents.
-- Not a fully featured enterprise chat platform.
-- Not a system where unreviewed AI output can silently rewrite official team plans.
-
-## Roadmap
-
-We are validating the product in small, end-to-end slices rather than committing to a large feature checklist.
-
-| Slice | Goal | Status |
+| 阶段 | 验证目标 | 状态 |
 | --- | --- | --- |
-| S0 · Team space | Rooms, discussion, references, basic meetings and permissions | Planned |
-| S1 · Trusted context | Evidence, AI proposals, batch review, confirmed revisions | Planned |
-| S2 · Ideas to demos | Experiments, versioned artifacts, feedback, comparisons | Planned |
-| S3 · Agent interoperability | Scoped context packets and lightweight result reporting | Planned |
-| S4 · Everyday flow | Better recovery, summaries, search, and reduced review noise | Planned |
+| S0 · 团队空间 | 协作空间、讨论、引用、基础会议和权限 | 规划中 |
+| S1 · 可信上下文 | 来源、候选变更、批量审核、修订历史 | 规划中 |
+| S2 · 想法到演示 | 并行实验、版本化演示、反馈比较 | 规划中 |
+| S3 · 智能体协作 | 跨工具的上下文读取和成果回传 | 规划中 |
+| S4 · 日常优化 | 增量摘要、检索、降噪、状态恢复 | 规划中 |
 
-See the [working roadmap](docs/ROADMAP.md) and the [product requirements draft (Chinese)](docs/PRD-v0.5.md). Scope and ordering may change after real team testing.
+详见[路线图](docs/ROADMAP.md)和[产品需求草案](docs/PRD-v0.5.md)。功能优先级会根据真实团队试用结果调整。
 
-## Get involved
+## 欢迎参与
 
-We are especially interested in how small teams build with different AI coding agents today.
+如果你和朋友使用不同的编码智能体做小型项目，欢迎提交具体的协作痛点、实验建议和原型反馈。
 
-- Share a specific collaboration problem or a possible experiment in an Issue.
-- Challenge our assumptions about meeting notes, shared memory, and review workflows.
-- Propose a small, testable change before starting a large implementation.
+贡献前请先阅读[贡献指南](CONTRIBUTING.md)和[维护约定](GOVERNANCE.md)；漏洞请通过[安全政策](SECURITY.md)指定的私密方式报告。
 
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) first. For security-sensitive reports, see [SECURITY.md](SECURITY.md).
+## 许可证
 
-## License
+采用 PolyForm Perimeter License 1.0.1，详见 [LICENSE](LICENSE)及[许可证中文说明](docs/LICENSE.zh-CN.md)。
 
-PolyForm Perimeter License 1.0.1. See [LICENSE](LICENSE).
-
-Personal and internal business use are permitted under the license. Using Demble to provide a competing product or service to others, even free of charge, is not permitted under this license. Other non-competing uses may be permitted; the full license terms govern. This is source-available software, not OSI-approved open source.
+许可证允许个人使用和企业内部使用；不授权利用 Demble 向他人提供竞争产品或服务，即使免费提供也可能受限。其他非竞争用途可能被允许，具体以完整许可证条款为准。本项目属于源码可用，不属于 OSI 定义的开源软件。

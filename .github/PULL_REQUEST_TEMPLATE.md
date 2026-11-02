@@ -1,22 +1,22 @@
-## Why
+## 为什么修改
 
-What user problem or approved Issue does this change address?
+这次改动解决了什么用户问题？关联哪个已讨论的任务？
 
-## What changed
+## 改动内容
 
--
+请列出主要变化及其影响。
 
-## Verification
+## 验证方式
 
-- [ ] I described how the change was tested (or why no test applies).
-- [ ] I updated relevant docs or marked the behavior as a prototype.
-- [ ] I checked privacy, Room permissions, and source traceability where relevant.
-- [ ] I did not introduce a mandatory coding-agent harness or external messaging dependency without an approved decision.
+- [ ] 已说明验证方式和结果，或解释为何不适用测试。
+- [ ] 已更新相关文档，或明确标注为原型行为。
+- [ ] 涉及时已检查隐私、协作空间权限及来源追溯。
+- [ ] 未在缺少正式决策的情况下引入必须使用的智能体工具或外部通讯依赖。
 
-## Demo / evidence
+## 演示或证据
 
-Link to a screenshot, demo, test result, or before/after example when useful. Do not include secrets or private team content.
+适用时提供截图、演示、测试结果或修改前后对比。请勿包含密钥和私有团队内容。
 
-## Open questions
+## 未决问题
 
-What is still uncertain or requires a human decision?
+还有哪些不确定内容，或需要人类明确决定的事项？

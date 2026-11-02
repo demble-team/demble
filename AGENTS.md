@@ -1,28 +1,29 @@
-# Guidance for Coding Agents
+# 编码智能体开发约定
 
-This repository is the early-stage, source-available home of **Demble**.
+本仓库是 **Demble** 的早期项目仓库。项目采用源码可用许可证，具体条款见 [LICENSE](LICENSE)。
 
-## Product intent
+## 产品方向
 
-Demble is a self-hostable collaboration workspace for small human teams and their coding agents. Humans own decisions; AI may propose changes, but proposals require explicit human review before becoming confirmed project state.
+Demble 是供小型人类团队及其编码智能体共同使用的自托管协作空间。人类负责正式决策；AI 可以提出候选变更，但必须经过明确的人工审核后才能成为正式项目状态。
 
-Read `README.md`, `README.zh-CN.md`, and `docs/ROADMAP.md` before making architectural assumptions.
+作出架构假设前，先阅读[项目介绍](README.md)、[路线图](docs/ROADMAP.md)和[产品需求草案](docs/PRD-v0.5.md)。
 
-## Constraints
+## 约束
 
-- **Do not assume a specific coding-agent harness.** The project intends to support different coding tools through stable interfaces.
-- **Do not introduce a required external IM or meeting service** for the core user workflow without an approved product decision.
-- **Do not claim unimplemented features are shipped.** Mark proposals, prototypes, and production behavior clearly.
-- **Do not silently promote inferred AI content to authoritative decisions, plans, or assignments.** Include explicit review boundaries.
-- **Do not access, upload, or replicate private chats, agent sessions, credentials, or local files** without user consent and an authorized scope.
-- **Prefer the smallest verifiable end-to-end slice.** Make assumptions visible and document reversibility.
-- **Preserve source traceability.** Changes to shared context must retain origin and revision information.
+- **文档统一使用中文。** 说明文档、任务、拉取请求和模板的面向人类文案使用中文；暂不维护英文版本或语言切换入口。产品名、代码标识符、API 字段、命令和官方许可证原文保留原样。
+- **不绑定特定编码智能体运行工具。** 通过稳定接口兼容不同开发工具。
+- **未经批准，不引入核心流程必须依赖的外部即时通讯或会议服务。**
+- **不得把未实现的功能描述为已交付。** 明确区分规划、原型和正式行为。
+- **不得把 AI 推断悄悄升级为正式决策、计划或任务分配。** 保留明确的人工审核边界。
+- **未经用户同意和范围授权，不访问、上传或复制私有聊天、智能体会话、凭据及本地文件。**
+- **优先完成最小、可验证的端到端切片。** 显式记录假设和可逆性。
+- **保留来源和修订历史。** 共享上下文的变更必须可追溯。
 
-## Working on tasks
+## 工作方式
 
-1. Confirm the intended user scenario and the current roadmap slice.
-2. State assumptions when the product or technical contract is undecided.
-3. Implement only the authorized scope; use tests and reproducible verification where possible.
-4. Report what changed, what was tested, what remains uncertain, and any permission or security risks.
+1. 确认用户场景和当前路线图阶段。
+2. 产品或技术契约尚未确定时，说明假设。
+3. 仅实现授权范围，采用适当的测试和可复现验证。
+4. 用中文说明改动、验证结果、未决问题以及实际存在的权限或安全风险。
 
-No tool-specific instructions are required. Keep this file compatible with Codex, Claude Code, OpenCode, and other coding agents.
+本文件适用于 Codex、Claude Code、OpenCode 等编码智能体，不要求成员统一工具。
