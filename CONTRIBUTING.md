@@ -24,6 +24,8 @@ We have not selected a permanent language, framework, database, or test runner y
 
 ## Working philosophy
 
+See [GOVERNANCE.md](GOVERNANCE.md) for maintenance responsibilities and the Issue → branch → PR → review workflow.
+
 - Humans review consequential decisions.
 - Source evidence and revisions stay traceable.
 - Experiments should have a clear question and outcome.
