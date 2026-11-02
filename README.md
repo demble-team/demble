@@ -4,7 +4,7 @@
 
 ![Demble 项目规划示意：团队讨论后，AI 整理候选，由人类审核形成可信共识；成员使用各自的编码智能体制作演示，回传成果并收集反馈，推动下一轮调整。](docs/assets/demble-overview.png)
 
-[开发路线图](docs/ROADMAP.md) · [参与贡献](CONTRIBUTING.md)
+[开发路线图](docs/ROADMAP.md) · [开工前上下文基线](docs/CONTEXT_BASELINE.md) · [参与贡献](CONTRIBUTING.md)
 
 Demble 是面向小型创业／开发团队及其 AI 编码智能体的**源码可用、可自托管协作空间**。
 
@@ -42,6 +42,8 @@ Demble 希望降低这部分协作成本，而不是用 AI 接管团队。
 - **执行边界**：Demble 提供上下文并接收授权范围内的成果、进展和候选提案，不托管成员的编码智能体或接管私有会话。
 
 详细实体和接口语义见[产品需求草案](docs/PRD-v0.5.md)。
+
+图中的模块不是独立微服务或已选定的部署组件；权限失效、版本引用及批次提交等未定契约见[开工前上下文基线](docs/CONTEXT_BASELINE.md)。
 
 ## 我们坚持的原则
 
