@@ -1,5 +1,5 @@
-name: 想法或实验建议
-description: 描述一个真实协作问题，并提出验证方案的小实验。
+name: 想法与建议
+description: 说说哪里用起来不顺，或者你想试试什么。
 title: "[想法] "
 labels: [功能建议]
 body:
@@ -7,35 +7,35 @@ body:
     id: problem
     attributes:
       label: 遇到了什么问题？
-      description: 描述人类与编码智能体共同开发时的真实协作困难。
-      placeholder: 我们不得不向三个不同的智能体重复解释同一个决定……
+      description: 当时在做什么，哪里不顺？请给一个具体例子。
+      placeholder: 换一个 AI 编程工具，就得重新解释一遍项目背景……
     validations:
       required: true
   - type: textarea
     id: impact
     attributes:
-      label: 为什么值得解决？
-      description: 这个问题带来了哪些时间、上下文或协调成本？
+      label: 这个问题影响了什么？
+      description: 比如多花了多少时间、遗漏了什么信息，或者影响了谁。
     validations:
       required: true
   - type: textarea
     id: experiment
     attributes:
-      label: 最小验证实验
-      description: 能否通过一个演示或范围明确的原型验证这个想法？
+      label: 你想怎么试？
+      description: 如果有方案，可以用什么小 Demo 或试验看看它有没有帮助？
     validations:
       required: false
   - type: textarea
     id: outcome
     attributes:
-      label: 成功的证据
-      description: 出现什么可观察结果，才能说明这个方案有帮助？
+      label: 怎样算有帮助？
+      description: 写一个实际能检查的结果；暂时不确定也可以。
     validations:
       required: false
   - type: checkboxes
     id: privacy
     attributes:
-      label: 隐私检查
+      label: 提交前确认
       options:
-        - label: 我已移除密钥、个人数据和私有智能体会话记录。
+        - label: 内容不含密钥、个人数据和私有编程会话。
           required: true
