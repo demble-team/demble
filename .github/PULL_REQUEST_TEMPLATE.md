@@ -4,7 +4,7 @@ What user problem or approved Issue does this change address?
 
 ## What changed
 
-- 
+-
 
 ## Verification
 
