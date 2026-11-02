@@ -1,5 +1,5 @@
 name: 问题反馈
-description: 报告现有原型或版本中能够复现的问题。
+description: 使用原型或已发布版本时遇到了问题，可以在这里反馈。
 title: "[问题] "
 labels: [问题]
 body:
@@ -7,20 +7,20 @@ body:
     id: summary
     attributes:
       label: 出现了什么问题？
-      description: 请描述实际观察到的行为。
+      description: 你看到了什么？有截图或报错时可以一起附上。
     validations:
       required: true
   - type: textarea
     id: reproduce
     attributes:
-      label: 复现步骤
+      label: 怎么重现？
       placeholder: "1. 打开……\n2. 选择……\n3. 观察……"
     validations:
       required: true
   - type: textarea
     id: expected
     attributes:
-      label: 预期行为
+      label: 你原本期望怎样？
     validations:
       required: true
   - type: input
@@ -33,7 +33,7 @@ body:
   - type: checkboxes
     id: sensitivity
     attributes:
-      label: 安全与隐私检查
+      label: 提交前确认
       options:
-        - label: 此报告不包含密钥、私有团队内容或安全漏洞细节。
+        - label: 内容不含密钥和私人资料；安全漏洞请走私密报告入口。
           required: true
