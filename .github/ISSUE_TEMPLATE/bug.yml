@@ -1,39 +1,39 @@
-name: Bug report
-description: Report a reproducible problem in an available prototype or release.
-title: "[Bug] "
-labels: [bug]
+name: 问题反馈
+description: 报告现有原型或版本中能够复现的问题。
+title: "[问题] "
+labels: [问题]
 body:
   - type: textarea
     id: summary
     attributes:
-      label: What went wrong?
-      description: Explain the observed behavior.
+      label: 出现了什么问题？
+      description: 请描述实际观察到的行为。
     validations:
       required: true
   - type: textarea
     id: reproduce
     attributes:
-      label: Steps to reproduce
-      placeholder: "1. Open ...\n2. Select ...\n3. Observe ..."
+      label: 复现步骤
+      placeholder: "1. 打开……\n2. 选择……\n3. 观察……"
     validations:
       required: true
   - type: textarea
     id: expected
     attributes:
-      label: Expected behavior
+      label: 预期行为
     validations:
       required: true
   - type: input
     id: version
     attributes:
-      label: Version or commit
-      placeholder: Commit hash or prototype name
+      label: 版本或提交
+      placeholder: 提交哈希或原型名称
     validations:
       required: false
   - type: checkboxes
     id: sensitivity
     attributes:
-      label: Security and privacy check
+      label: 安全与隐私检查
       options:
-        - label: This report contains no secrets, private team content, or security vulnerability details.
+        - label: 此报告不包含密钥、私有团队内容或安全漏洞细节。
           required: true

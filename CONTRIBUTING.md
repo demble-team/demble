@@ -1,35 +1,37 @@
-# Contributing to Demble
+# 参与 Demble 开发
 
-Thanks for helping make small-team, human-led AI development better.
+Demble 目前处于**早期设计与产品验证阶段**。欢迎提交具体问题、实验建议、文档修正、设计原型及小范围代码改动。
 
-Demble is in **pre-alpha / product validation**. We welcome concrete problem reports, experiments, documentation fixes, design prototypes, and small code contributions as an implementation emerges.
+## 提交任务前
 
-## Before opening an Issue
+1. 搜索现有任务和讨论，避免重复。
+2. 说明真实工作流程和协作成本，不只列出期望功能。
+3. 尽量提出一个可以验证想法的最小实验。
+4. 删除示例中的密钥、私有智能体会话、敏感会议内容及其他凭据。
 
-1. Search existing Issues and Discussions to avoid duplicates.
-2. Describe the real workflow and the coordination cost, not only a proposed feature.
-3. If possible, describe the smallest experiment that would show whether an idea works.
-4. Remove secrets, private agent transcripts, sensitive meeting content, and credentials from examples.
+## 提交拉取请求前
 
-## Before opening a Pull Request
+1. 非简单改动先通过任务讨论范围。
+2. 保持改动集中、方便审核；有实现时补充适当文档和测试。
+3. 说明对人类成员、编码智能体和共享上下文的影响。
+4. 未经明确批准，不引入必须使用的外部通讯平台或指定智能体工具。
+5. 不得让 AI 候选内容未经确认就成为正式决策或计划。
+6. 行为、数据契约或权限变化时，说明迁移和兼容影响。
 
-1. For non-trivial changes, discuss the scope in an Issue first.
-2. Keep changes focused and reviewable. Include relevant documentation or tests when implementation exists.
-3. Explain how the change affects people, coding agents, and shared context.
-4. Do not introduce a required third-party messaging platform or a mandatory coding-agent harness without explicit project approval.
-5. Do not silently turn AI-generated proposals into confirmed decisions or plans.
-6. If behavior, data contracts, or permissions change, describe migration and compatibility implications.
+目前尚未确定固定的语言、框架、数据库或测试工具，不应把某个技术栈当作既定要求。
 
-We have not selected a permanent language, framework, database, or test runner yet. Please avoid treating a particular stack as an agreed requirement.
+## 文档和沟通语言
 
-## Working philosophy
+当前仓库的说明文档、任务、拉取请求和模板统一使用中文，暂不维护英文版本。代码标识符、API 字段、命令及官方许可证原文保留原样。以后产品成熟时再安排英文文档。
 
-See [GOVERNANCE.md](GOVERNANCE.md) for maintenance responsibilities and the Issue → branch → PR → review workflow.
+## 协作原则
 
-- Humans review consequential decisions.
-- Source evidence and revisions stay traceable.
-- Experiments should have a clear question and outcome.
-- New abstractions should justify their cost to a 2–10-person team.
-- Harness interoperability is a product boundary, not a reason to build another agent runtime.
+维护职责及“任务 → 分支 → 拉取请求 → 评审”的流程见[维护约定](GOVERNANCE.md)。
 
-Security issues should not be filed publicly. Please follow [SECURITY.md](SECURITY.md).
+- 重要决策由人类审核。
+- 原始证据和修订历史保持可追溯。
+- 实验应有明确问题和可观察结果。
+- 新抽象必须值得一个 2–10 人团队承担维护成本。
+- 跨智能体工具兼容是产品边界，不应借此另造智能体运行系统。
+
+安全问题请勿公开提交，按[安全政策](SECURITY.md)私密报告。

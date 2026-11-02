@@ -1,49 +1,37 @@
-# Demble team working agreement
+# Demble 团队维护约定
 
-Status: initial operating workflow. Product and technical choices remain subject to review.
+状态：初始协作流程。产品和技术方案仍需按具体任务讨论、审核。
 
-## Maintenance
+## 维护职责
 
-The project is maintained in the [demble-team organization](https://github.com/demble-team).
-The `@demble-team/maintainers` team shares implementation and review responsibility.
-Organization owners manage membership and repository administration. Repository access
-is granted through teams; ordinary contributors do not need organization Owner access.
+项目由 [demble-team 组织](https://github.com/demble-team)维护，核心维护团队 `@demble-team/maintainers` 共同承担实现和评审职责。
 
-The current organization owner is `@SH1ROd`. A second trusted owner and individual
-product, technical, and release responsibilities remain to be agreed with the team.
-Do not treat this document as assigning responsibilities to people who have not accepted them.
+组织所有者负责成员和仓库管理，普通开发权限通过团队授予，无需所有成员都成为组织所有者。
 
-## Development workflow
+当前组织所有者为 `@SH1ROd`。第二位组织所有者，以及产品、技术和发布的个人分工，待成员加入后共同确定。不得把本文当作对尚未接受职责的成员进行任务指派。
 
-1. For a non-trivial change, open or select an Issue with a concrete goal and acceptance criteria.
-2. Work on a focused branch, such as `feat/room-membership`, `fix/message-reference`, or `docs/context-contract`.
-3. Open a pull request describing the problem, behavior, verification, and remaining questions.
-4. Obtain approval from at least one other reviewer and resolve review conversations.
-5. Squash merge into `main`, then remove the completed branch.
+## 开发流程
 
-Keep `main` protected from force pushes and deletion. Repository administrators may
-use the pull-request bypass for necessary bootstrap or recovery work; explain the
-reason in the PR. Routine changes should follow the normal review process.
+1. 非简单改动先创建或选择任务，写清目标和验收条件。
+2. 使用职责集中的分支，例如 `feat/room-membership`、`fix/message-reference`、`docs/context-contract`。
+3. 提交拉取请求，说明问题、行为变化、验证方式和未决问题。
+4. 至少获得一位其他评审者批准，并解决评审对话。
+5. 使用压缩合并方式（Squash merge）合入 `main`，随后删除已完成分支。
 
-CI requirements will be added after actual checks are available and passing.
-There is no agreed application stack or release pipeline yet.
+`main` 禁止强制推送和删除。必要的初始化或恢复工作允许仓库管理员通过拉取请求绕过审批要求，但必须在请求正文中解释原因；日常改动仍按正常评审流程进行。
 
-## Decisions and disagreements
+实际检查可运行并通过后，再增加持续集成的合并门槛。目前尚未确定应用技术栈和发布流水线。
 
-Discuss consequential product, architecture, permission, and scope changes in an Issue
-or PR. Record the outcome, rationale, participants, and unresolved objections.
-Do not describe a disputed proposal or AI inference as confirmed team agreement.
-Keep work blocked by an unresolved decision visible instead of silently changing scope.
+## 决策和分歧
 
-The current license is [PolyForm Perimeter 1.0.1](LICENSE). Changes to licensing,
-commercial authorization arrangements, and contribution rights require a separate
-explicit agreement; GitHub administrative permissions are not that agreement.
+重要的产品、架构、权限及范围变化通过任务或拉取请求讨论，记录结论、原因、参与者和未解决的异议。
 
-## Security and growth
+不得把存在争议的方案或 AI 推断写成已确认的团队共识。因决策未定而受阻的工作应显式记录，不得暗中更改范围。
 
-Use individual GitHub accounts and enable two-factor authentication before the
-organization makes it mandatory. Report vulnerabilities using [SECURITY.md](SECURITY.md).
+当前许可证为 [PolyForm Perimeter 1.0.1](LICENSE)。许可证变更、商业授权安排和贡献权利需要另行明确约定；GitHub 管理权限不等于该约定。
 
-Start with one maintainers team. Split ownership by area when real review workloads
-justify it, and update CODEOWNERS and this agreement together. Revisit owner continuity,
-member access, and release responsibility when members join or leave.
+## 账号安全和团队扩展
+
+使用个人 GitHub 账号，并在组织强制要求前启用双重认证。漏洞按[安全政策](SECURITY.md)私密报告。
+
+当前先维护一个核心维护团队。评审工作量确有需要时再按领域拆分，并同时更新评审责任文件和本约定。成员加入或离开时，复核所有者接替、成员权限和发布职责。

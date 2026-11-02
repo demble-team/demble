@@ -1,56 +1,56 @@
-# Demble — Working Roadmap
+# Demble 开发路线图
 
-**Status:** early product definition, subject to validation.
+**状态：早期产品定义，所有阶段均待验证。**
 
-Our north star is to reduce the coordination cost of turning an idea into a shared, testable result for a 2–10-person human + AI coding team.
+我们的目标是降低 2–10 人团队与编码智能体共同把想法转化为可体验、可比较成果的协作成本。
 
-This roadmap is sliced by **end-to-end validation**, not by arbitrary feature count. It does not commit to release dates or a specific technology stack.
+路线图按**端到端验证闭环**划分，不按功能数量堆叠，不承诺未经估算的发布日期或技术栈。
 
-## S0 — A usable team space
+## S0：可用的团队空间
 
-**Question:** Can three people discuss and hold a meeting without depending on an external messaging account?
+**要验证的问题：** 三位成员能否在不依赖外部通讯账号的情况下，完成讨论和会议？
 
-Planned scope: Room membership and basic permissions, real-time group discussion, stable references, basic voice and screen-sharing feasibility, and manually maintained meeting notes.
+规划范围：协作空间成员、基本权限、实时群聊、稳定引用、基础语音和屏幕共享可行性，以及人工维护的会议纪要。
 
-**Done when:** three members can complete a discussion and meeting; permission boundaries and stable references can be demonstrated.
+**验收条件：** 三位成员完成一次讨论和会议；能够演示权限隔离及稳定引用。
 
-## S1 — Trusted shared context
+## S1：可信共享上下文
 
-**Question:** Can a discussion become a traceable team decision without AI inventing agreement?
+**要验证的问题：** 讨论能否形成可追溯的团队决策，同时避免 AI 虚构共识？
 
-Planned scope: source events, decisions, context links, AI change proposals, deduplication, a review inbox, batch review, and context revisions.
+规划范围：来源事件、决策、上下文关联、AI 候选变更、去重、审核收件箱、批量审核和上下文修订。
 
-**Done when:** humans can review proposals together; confirmed decisions are traceable; replaced decisions do not appear as current truth.
+**验收条件：** 人类可以集中审核候选；正式决策有据可查；已被替代的决策不再作为当前有效结论返回。
 
-## S2 — Ideas to demos
+## S2：从想法到演示
 
-**Question:** Can the team compare two real prototypes and change direction based on feedback?
+**要验证的问题：** 团队能否比较两个真实原型，并依据反馈调整方向？
 
-Planned scope: experiments, a lightweight plan, versioned artifacts and demos, scoped links, feedback, and experiment comparison.
+规划范围：实验、轻量计划、版本化成果与演示、受权限限制的链接、反馈和实验比较。
 
-**Done when:** two developers publish two comparable experiences and feedback stays attached to the correct versions.
+**验收条件：** 两位开发者发布可比较的体验；反馈始终关联正确版本。
 
-## S3 — Agent interoperability
+## S3：跨编码智能体协作
 
-**Question:** Can different coding agents recover the same valid team context without sharing private sessions?
+**要验证的问题：** 不同编码智能体能否在不共享私有会话的情况下，恢复同一份有效团队上下文？
 
-Planned scope: scoped CLI and HTTP context access, context revision identifiers, context packets, minimal progress and artifact reporting, and stale-context indicators.
+规划范围：按权限限定的命令行和 HTTP API、上下文修订标识、上下文包、最小进展及成果回传、过期上下文提示。
 
-**Done when:** at least two different harnesses read the same effective decisions and report results back to the appropriate experiment.
+**验收条件：** 至少两种不同工具读取相同的有效决策，并将成果回传到对应实验。
 
-## S4 — A sustainable everyday workflow
+## S4：可持续的日常工作流
 
-**Question:** Does the system reduce information overload over two weeks of real use?
+**要验证的问题：** 连续两周真实使用后，系统是否降低了信息过载？
 
-Planned scope: incremental recovery summaries, deduplication, search improvements, invited AI discussion support, reduced review noise, and resiliency improvements.
+规划范围：增量变化摘要、去重、搜索优化、受邀参与的 AI 讨论、审核降噪及故障恢复。
 
-**Done when:** a real team can measure context recovery cost, review cost, and idea-to-demo time, and decide what to improve next.
+**验收条件：** 真实团队能够测量上下文恢复成本、审核成本和从想法到演示的时间，并据此决定后续方向。
 
-## Boundaries
+## 产品边界
 
-- We do **not** plan to replace IDEs or coding agent runtimes.
-- We do **not** require a vendor-specific agent harness.
-- We do **not** allow AI to confirm team-wide decisions silently.
-- We do **not** promise full video-conferencing, local dynamic preview tunneling, or autonomous worker orchestration in the first slice.
+- 不替代编辑器或编码智能体运行工具。
+- 不强制绑定单一厂商的智能体工具。
+- 不允许 AI 未经审核就确认团队级决策。
+- 首个切片不承诺完整视频会议、本地动态预览隧道或自主执行智能体编排。
 
-The original product requirements draft remains under team review; approved changes will be reflected in this public roadmap.
+[产品需求草案](PRD-v0.5.md)仍待团队审核，获批变更应同步到本路线图。

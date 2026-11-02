@@ -1,24 +1,26 @@
-# Security Policy
+# 安全政策
 
-Demble is in pre-alpha. No production security guarantees or supported release versions are available yet.
+Demble 处于早期验证阶段，目前没有可用于生产环境的安全保证，也没有正式支持的发行版本。
 
-## Reporting a vulnerability
+## 报告漏洞
 
-**Please do not open a public Issue for vulnerabilities, secrets, or private user data.**
+**请勿通过公开任务提交漏洞、密钥或私有用户数据。**
 
-Use GitHub's **Report a vulnerability** flow under this repository's Security tab. The maintainers should enable **Private vulnerability reporting** in repository settings when the repository is created.
+请进入仓库的安全页面（Security），选择私密报告漏洞（Report a vulnerability）：
 
-Include a concise description, affected area, reproducible steps, expected impact, and a safe proof of concept if appropriate. Do not access data you do not own.
+[私密报告安全漏洞](https://github.com/demble-team/demble/security/advisories/new)
 
-## Security priorities
+报告请包含简要说明、受影响范围、复现步骤、预期影响，以及适当情况下的安全验证示例。不要访问不属于你的数据。
 
-The planned product will handle team discussion, meetings, artifacts, agent credentials, and source-linked shared context. Early review should focus on:
+## 重点关注的安全边界
 
-- Room and membership isolation across the UI, API, search, and AI retrieval.
-- Minimal, revocable scopes for agent credentials.
-- Explicit consent and retention for audio, transcripts, and files.
-- No accidental upload of private agent sessions or local workspaces.
-- No unbounded execution or public exposure of local demo services.
-- Auditable changes and safe handling of source deletion or revoked access.
+规划中的产品涉及团队讨论、会议、成果、智能体凭据及带来源的共享上下文，早期评审应重点检查：
 
-Security-sensitive design choices should be reviewed before implementing them.
+- 页面、API、搜索和 AI 检索中的协作空间及成员隔离。
+- 智能体凭据的最小权限和撤销能力。
+- 音频、转录和文件处理中的明确同意及保留期限。
+- 防止意外上传私有智能体会话或本地工作区。
+- 防止无限制执行或公开暴露本地演示服务。
+- 变更审计，以及来源删除或权限撤销后的安全处理。
+
+涉及安全边界的设计应先审核，再实现。
